@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
+
         // Count how many enemy objects are currently in the scene
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("astro");
 
@@ -40,5 +41,6 @@ public class EnemySpawner : MonoBehaviour
 
         // Create the enemy in the scene
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Debug.Log("Count: " + enemies.Length);
     }
 }
